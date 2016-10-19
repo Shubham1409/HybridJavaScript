@@ -1,0 +1,45 @@
+<html>
+<body>
+
+<p id="demo"></p>
+
+<script>
+var myObj =
+[{'name':'Saurabh', 'age': 30, 'occupation': "Team Leader"},
+{'name':'Anupriya', 'age': 32, 'occupation': "Team Leader"},
+{'name':'Kalyani', 'age': 25, 'occupation': "Programmer"},
+{'name':'Damodaran', 'age': 27, 'occupation': "Programmer"},
+{'name':'Krishnakath', 'age': 22, 'occupation': "Programmer"},
+{'name':'Venketraman', 'age': 28, 'occupation': "Programmer"}];
+print('-',40);
+for(keys in myObj)
+{
+	if(myObj[keys].occupation=="Programmer")
+	{
+		console.log(myObj[keys]);
+	}
+}
+
+myObj.sort(function(a,b){return b.age - a.age;});
+console.log(myObj);
+
+var my = new Object();
+for(var i=0;i<myObj.length;i++)
+{
+	if(!my.hasOwnProperty(myObj[i].occupation))
+	{
+		my[myObj[i].occupation] = [{"name":myObj[i].name,"age":myObj[i].age}];
+	}
+	else
+	{
+			my[myObj[i].occupation] = my[myObj[i].occupation].concat([{"name":myObj[i].name,"age":myObj[i].age}]);
+	}
+}
+console.log(my);
+console.log(myObj.map(function(a){return a.name;}));
+
+	}
+}
+</script>
+</body>
+</html>

@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+</head>
+<body>
+	<input type="text" id="num"/>
+	<button onclick="myFunction(document.getElementById('num').value)">Print</button>
+	<script>
+	function myFunction(a) {
+		for(i=a;i>=1;i--){
+      for(j=i-1;j>=1;j--){
+        document.write("&nbsp"+" ");
+      }
+			for(k=a;k>=i;k--){
+				document.write("*"+"")
+			}
+			for(l=1;l<=a-i;l++){
+				document.write("*"+"")
+			}
+			document.write("</br>");
+    }
+	}
+	</script>
+</body>
+
+</html>

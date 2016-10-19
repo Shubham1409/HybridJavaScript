@@ -1,0 +1,24 @@
+<html>
+<body>
+
+<p id="demo"></p>
+
+<script>
+myObj=[5, [22], [[14]], [[4]],[5,6]];
+
+function flatter(b) {
+   var reg = [];
+   for(var i = 0; i < b.length; i++) {
+       if(Array.isArray(b[i])) {
+           reg = reg.concat(flatter(b[i]));
+       } else {
+           reg.push(b[i]);
+       }
+   }
+   return reg;
+}
+var s = flatter(myObj);
+document.write(s);
+</script>
+</body>
+</html>

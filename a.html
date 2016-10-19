@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+</head>
+<body>
+	<input type="text" id="num"/>
+	<button onclick="myFunction(document.getElementById('num').value)">Print</button>
+	<script>
+	function myFunction(a) {
+		var b = 0;
+		var c = 1;
+		for(i=0;i<a;i++){
+			if(i<=1){
+				sum=i;
+			}else{
+				sum = b+c;
+				b=c;
+				c=sum;
+			}
+			document.write(sum+" ");
+		}
+	}
+	</script>
+</body>
+
+</html>
